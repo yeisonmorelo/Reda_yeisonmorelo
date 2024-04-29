@@ -4,7 +4,8 @@ body {
     padding: 0;
     background-color: #f8f9fa;
 }
-.header { grid-area: header; }
+.header { grid-area: header; 
+text-align: left;}
 .navbar { grid-area: navbar; }
 .menu { grid-area: menu; }
 .maint { grid-area: maint; }
@@ -27,8 +28,8 @@ body {
 }
 h1 {
     color: #4CAF50;
-    font-size: 36px;
-    text-align: center;
+    font-size: 200px;
+    text-align: left;
 }
 .navbar {
     background-color: #4CAF50;
