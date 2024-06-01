@@ -6,8 +6,12 @@ body {
     
 
 }
+
 .header { grid-area: header;
 color:  #4CAF50; }
+
+.header { grid-area: header; 
+text-align: left;}
 .navbar { grid-area: navbar; }
 .menu { grid-area: menu; }
 .maint { grid-area: maint; }
@@ -35,9 +39,15 @@ padding: 10px;
     font-size: 25px;
 }
 h1 {
+
     
     font-size: 36px;
     text-align: center;
+
+    color: #4CAF50;
+    font-size: 200px;
+    text-align: left;
+
 }
 h2{
     color: #000000;
