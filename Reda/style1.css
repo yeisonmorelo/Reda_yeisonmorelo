@@ -10,8 +10,6 @@ body {
 .header { grid-area: header;
 color:  #4CAF50; }
 
-.header { grid-area: header; 
-text-align: left;}
 .navbar { grid-area: navbar; }
 .menu { grid-area: menu; }
 .maint { grid-area: maint; }
@@ -73,3 +71,5 @@ img{
     background-color: #ddd;
     color: black;
 }
+
+h3{ color: #4CAF50; }
