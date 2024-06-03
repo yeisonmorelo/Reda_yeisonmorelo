@@ -7,7 +7,7 @@ body {
     font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: ;
 }
 .row:after {
     content: "";
@@ -36,21 +36,21 @@ body {
 }
 aside{
     width: 20%;
-    background-color: gray;
+    background-color: green;
     padding: 10px;
     height: 75vh;
     float: left;
 }
 aside1{
     width: 20%;
-    background-color: gray;
+    background-color: green;
     padding: 10px;
     height: 75vh;
     float: right;
 }
 main{    
     width: 60%;
-    background-color: darkgray;
+    background-color: white;
     padding: 10px;
     height: 75vh;
     float: left;
