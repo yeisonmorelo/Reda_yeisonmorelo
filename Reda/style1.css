@@ -68,7 +68,7 @@ main{
     width: 60%;
     background-color: white;
     padding: 10px;
-    height: 75vh;
+    height: auto;
     float: left;
 }
 h1 { 
