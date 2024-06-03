@@ -3,10 +3,7 @@ body{
     background-color: bisque;
 }
 h1{ color: greenyellow; background-color: green;}
-p{ color: black;}
-#pss.p{ 
- text-align: left; font-family: 'Times New Roman', Times, serif;
-}
+
 header{ height: 1px; text-align: center; background-color: darkgreen;font-style: normal;}
 
 p{ background-color: black; font-size: 400%; font-family: Arial, Helvetica, sans-serif; color: brown;}
