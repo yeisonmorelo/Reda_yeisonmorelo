@@ -3,13 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    
-
 }
 
 .header { grid-area: header;
 color:  #4CAF50; }
-
 .navbar { grid-area: navbar; }
 .menu { grid-area: menu; }
 .maint { grid-area: maint; }
@@ -37,13 +34,11 @@ padding: 10px;
     font-size: 25px;
 }
 h1 {
-
-    
     font-size: 36px;
     text-align: center;
 
     color: #4CAF50;
-    font-size: 200px;
+    font-size: 36px;
     text-align: left;
 
 }
@@ -74,6 +69,6 @@ img{
 
 h3{ color: #4CAF50; }
 
-.img{width: 310px ;
-    height: 200px ;
-    position: center; }
+.img{width: 50px ;
+    height: 50px ;
+    position: right; }
