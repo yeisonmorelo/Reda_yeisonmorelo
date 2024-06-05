@@ -19,8 +19,8 @@ body {
 header{
     height: 10vh;
     background-color: white;
+    color: #4CAF50;
     padding: 10px;
-    text-align: center;
     font-size: 25px;
 }
 .navbar{
@@ -62,7 +62,6 @@ main{
 }
 h1 {
     font-size: 34px;
-    text-align: center;
     color: #4CAF50;
     text-align: left;
 }
