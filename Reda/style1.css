@@ -18,24 +18,27 @@ body {
 }
 header{
     height: 10vh;
-    background-color: lightgray;
+    background-color: white;
     padding: 10px;
     text-align: center;
     font-size: 25px;
 }
-nav{
+.navbar{
     width: 100%;
-    background-color: #353535;
+    background-color:#4CAF50 ;
     overflow: hidden;
     padding: 10px;
 }
-nav > a{
+.navbar a {
     color: white;
-    padding: 15px;
+    text-align: center;
+    padding: 14px 20px;
     text-decoration: none;
+    font-size: 25px;
 }
-nav > a:hover{
-    background-color: #464646;
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
 aside{
     width: 20%;
@@ -72,24 +75,6 @@ img{
     height: 200px ;
     position: center;
 }
-.navbar {
-    background-color: #4CAF50;
-    /*overflow: hidden;*/
-}
-.navbar a {
-    /*float: left;*/
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 25px;
-}
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-
 
 .img{width: 310px ;
     height: 200px ;
