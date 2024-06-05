@@ -39,23 +39,22 @@ nav > a:hover{
 }
 aside{
     width: 20%;
-    background-color: gray;
+    background-color:  #4CAF50;
     padding: 10px;
     height: 75vh;
     float: left;
 }
 aside1{
     width: 20%;
-    background-color: gray;
+    background-color:  #4CAF50;
     padding: 10px;
     height: 75vh;
     float: right;
 }
 main{    
     width: 60%;
-    background-color: darkgray;
     padding: 10px;
-    height: 75vh;
+    height: auto;
     float: left;
 }
 h1 {
@@ -79,11 +78,11 @@ img{
 }
 .navbar a {
     /*float: left;*/
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
 }
 .navbar a:hover {
     background-color: #ddd;
