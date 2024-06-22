@@ -22,7 +22,8 @@ nav {
     display: block;
     padding: 14px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
+    white-space: 20px;
 }
 .nav a {
     float: left;
@@ -44,11 +45,14 @@ aside{
     height: 75vh;
     float: right;
 }
+header{
+    background-color:#4CAF50 ;
+}
 
 h1 {
     font-size: 36px;
     text-align: center;
-    color: #4CAF50;
+    color:white;
     font-size: 26px;
     text-align: left;
 
