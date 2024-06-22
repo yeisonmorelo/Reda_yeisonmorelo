@@ -23,7 +23,7 @@ nav {
     padding: 14px 20px;
     text-decoration: none;
     font-size: 25px;
-    white-space: 20px;
+    
 }
 .nav a {
     float: left;
@@ -44,9 +44,12 @@ aside{
     padding: 10px;
     height: 75vh;
     float: right;
+    overflow: auto;
 }
 header{
     background-color:#4CAF50 ;
+    margin: 15px;
+    padding: 15px;
 }
 
 h1 {
