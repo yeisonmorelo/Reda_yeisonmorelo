@@ -8,19 +8,21 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #1ef477;
             padding: 20px;
         }
         .resultados {
-            border: #007BFF;
-            color: aqua;
+            border: 1px solid #0d6b29;
+            color: #156538;
             margin: 4px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
         }
-        
         .container {
             max-width: 800px;
             margin: auto;
-            background: #fff;
+            background: #a4e29d;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,9 +55,10 @@
     <div class="container">
         <h1>Evaluación sobre los Reinos Animales</h1>
         <p>Por favor, responde las siguientes preguntas sobre los reinos animales.</p>
+        <input type="text" name="name" id="name" placeholder="Escriba su(s) nombre y apellidos completos " size="100px">
         
         <form id="quiz-form">
-            <div class="question" id="pregunta 1">
+            <div class="question">
                 <h3>1. ¿Cuál de los siguientes es un ejemplo del Reino Protista?</h3>
                 <input type="radio" id="a1" name="q1" value="a">
                 <label for="a1">a) Algas</label><br>
@@ -67,7 +70,7 @@
                 <label for="d1">d) Animales</label>
             </div>
             
-            <div class="question" id="Pregunta 2">
+            <div class="question">
                 <h3>2. ¿Qué característica principal distingue a los organismos del Reino Fungi?</h3>
                 <input type="radio" id="a2" name="q2" value="a">
                 <label for="a2">a) Fotosíntesis</label><br>
@@ -79,7 +82,7 @@
                 <label for="d2">d) Multicelularidad</label>
             </div>
             
-            <div class="question" id="Pregunta 3">
+            <div class="question">
                 <h3>3. ¿Cuál es una característica común de todos los animales del Reino Animalia?</h3>
                 <input type="radio" id="a3" name="q3" value="a">
                 <label for="a3">a) Pared celular</label><br>
@@ -91,7 +94,7 @@
                 <label for="d3">d) Reproducción asexual</label>
             </div>
             
-            <div class="question" id="Pregunta 4">
+            <div class="question">
                 <h3>4. ¿Cuál de los siguientes no pertenece al Reino Plantae?</h3>
                 <input type="radio" id="a4" name="q4" value="a">
                 <label for="a4">a) Musgos</label><br>
@@ -103,7 +106,7 @@
                 <label for="d4">d) Gimnospermas</label>
             </div>
 
-            <div class="question" id="Pregunta 5">
+            <div class="question">
                 <h3>5. ¿Cuál es la principal característica del Reino Monera?</h3>
                 <input type="radio" id="a5" name="q5" value="a">
                 <label for="a5">a) Organismos pluricelulares</label><br>
@@ -114,34 +117,37 @@
                 <input type="radio" id="d5" name="q5" value="d">
                 <label for="d5">d) Organismos autotróficos</label>
             </div>
+
+            <button type="button" class="submit-btn" onclick="calcularResultados()">Enviar</button>
         </form>
-            <table class="resultados"> resultados
-            <th>Pregunta 1 </th>
-            <th> Pregunta 2 </th>
-            <th> Pregunta 3 </th>
-            <th> Pregunta 4 </th>
-            <th> Pregunta 5 </th>
-            <tbody id="cuerpo"></tbody>
-            </table>
-            <button type="submit" class="submit-btn">Enviar</button>
-<script>
-            var salida= '';
-            function mostrarInput() {
-                    var nombre = document.getElementById("nom").value;
-                    var apellido = document.getElementById("ape").value;
-                    var sexo = document.querySelector('input[name="sexo"]:checked').value;
-                    var fechaReg = document.getElementById("fecha").value;
-                    var añoNac = document.getElementById("añoNac").value;
-                    var nf = document.getElementById("nf").value;
-        
-                    salida += '<tr><td>' + nombre + '</td><td>' + apellido + '</td><td>' +
-                        sexo + '</td><td>' + fechaReg + "</td><td>" + añoNac + "</td><td>" + edad(añoNac) +
-                        "</td><td>" + evaluarEdad(añoNac) + "</td><td>" + colorearNota(nf) +
-                        "</td><td>" + evaluarNotaFinal(nf) + "</td><td>" + colorearCalificacion(nf) +
-                        "</td></tr>";
-                    document.getElementById("cuerpo").innerHTML = salida;
-                    LimpiarCajas();
-                }
+        <div class="resultados" id="resultados"></div>
     </div>
+
+    <script>
+        function calcularResultados() {
+            const respuestasCorrectas = ['a', 'b', 'c', 'c', 'b'];
+            const formulario = document.getElementById('quiz-form');
+            let puntaje = 0;
+
+            for (let i = 0; i < respuestasCorrectas.length; i++) {
+                const pregunta = formulario['q' + (i + 1)];
+                const respuestaSeleccionada = Array.from(pregunta).find(radio => radio.checked);
+                if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[i]) {
+                    puntaje++;
+                }
+            }
+
+            mostrarResultados(puntaje, respuestasCorrectas.length);
+        }
+
+        function mostrarResultados(puntaje, totalPreguntas) {
+            const nombre = document.getElementById("name").value;
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = `
+                <h2>Resultados</h2>
+                <p>${nombre}, obtuviste ${puntaje} de ${totalPreguntas} preguntas correctas.</p>
+            `;
+        }
+    </script>
 </body>
 </html>
