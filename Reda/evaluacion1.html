@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Reinos Animales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1ef477;
+            padding: 20px;
+        }
+        .resultados {
+            border: 1px solid #0d6b29;
+            color: #156538;
+            margin: 4px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #a4e29d;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Evaluación sobre los Reinos Animales</h1>
+        <p>Por favor, responde las siguientes preguntas sobre los reinos animales.</p>
+        <input type="text" name="name" id="name" placeholder="Escriba su(s) nombre y apellidos completos " size="100px">
+        
+        <form id="quiz-form">
+            <div class="question">
+                <h3>1. ¿Cuál de los siguientes es un ejemplo del Reino Protista?</h3>
+                <input type="radio" id="a1" name="q1" value="a">
+                <label for="a1">a) Algas</label><br>
+                <input type="radio" id="b1" name="q1" value="b">
+                <label for="b1">b) Hongos</label><br>
+                <input type="radio" id="c1" name="q1" value="c">
+                <label for="c1">c) Plantas</label><br>
+                <input type="radio" id="d1" name="q1" value="d">
+                <label for="d1">d) Animales</label>
+            </div>
+            
+            <div class="question">
+                <h3>2. ¿Qué característica principal distingue a los organismos del Reino Fungi?</h3>
+                <input type="radio" id="a2" name="q2" value="a">
+                <label for="a2">a) Fotosíntesis</label><br>
+                <input type="radio" id="b2" name="q2" value="b">
+                <label for="b2">b) Heterotrofía</label><br>
+                <input type="radio" id="c2" name="q2" value="c">
+                <label for="c2">c) Movilidad</label><br>
+                <input type="radio" id="d2" name="q2" value="d">
+                <label for="d2">d) Multicelularidad</label>
+            </div>
+            
+            <div class="question">
+                <h3>3. ¿Cuál es una característica común de todos los animales del Reino Animalia?</h3>
+                <input type="radio" id="a3" name="q3" value="a">
+                <label for="a3">a) Pared celular</label><br>
+                <input type="radio" id="b3" name="q3" value="b">
+                <label for="b3">b) Autotrofía</label><br>
+                <input type="radio" id="c3" name="q3" value="c">
+                <label for="c3">c) Células eucariotas</label><br>
+                <input type="radio" id="d3" name="q3" value="d">
+                <label for="d3">d) Reproducción asexual</label>
+            </div>
+            
+            <div class="question">
+                <h3>4. ¿Cuál de los siguientes no pertenece al Reino Plantae?</h3>
+                <input type="radio" id="a4" name="q4" value="a">
+                <label for="a4">a) Musgos</label><br>
+                <input type="radio" id="b4" name="q4" value="b">
+                <label for="b4">b) Helechos</label><br>
+                <input type="radio" id="c4" name="q4" value="c">
+                <label for="c4">c) Bacterias</label><br>
+                <input type="radio" id="d4" name="q4" value="d">
+                <label for="d4">d) Gimnospermas</label>
+            </div>
+
+            <div class="question">
+                <h3>5. ¿Cuál es la principal característica del Reino Monera?</h3>
+                <input type="radio" id="a5" name="q5" value="a">
+                <label for="a5">a) Organismos pluricelulares</label><br>
+                <input type="radio" id="b5" name="q5" value="b">
+                <label for="b5">b) Células procariotas</label><br>
+                <input type="radio" id="c5" name="q5" value="c">
+                <label for="c5">c) Eucariotas fotosintéticos</label><br>
+                <input type="radio" id="d5" name="q5" value="d">
+                <label for="d5">d) Organismos autotróficos</label>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="calcularResultados()">Enviar</button>
+        </form>
+        <div class="resultados" id="resultados"></div>
+    </div>
+
+    <script>
+        function calcularResultados() {
+            const respuestasCorrectas = ['a', 'b', 'c', 'c', 'b'];
+            const formulario = document.getElementById('quiz-form');
+            let puntaje = 0;
+
+            for (let i = 0; i < respuestasCorrectas.length; i++) {
+                const pregunta = formulario['q' + (i + 1)];
+                const respuestaSeleccionada = Array.from(pregunta).find(radio => radio.checked);
+                if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[i]) {
+                    puntaje++;
+                }
+            }
+
+            mostrarResultados(puntaje, respuestasCorrectas.length);
+        }
+
+        function mostrarResultados(puntaje, totalPreguntas) {
+            const nombre = document.getElementById("name").value;
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = `
+                <h2>Resultados</h2>
+                <p>${nombre}, obtuviste ${puntaje} de ${totalPreguntas} preguntas correctas.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
