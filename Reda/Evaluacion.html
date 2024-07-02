@@ -4,183 +4,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Reinos de la Naturaleza</title>
-    <link rel="stylesheet" href="style1.css">   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #156538;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #156538;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .row {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #156538;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /*position: fixed;*/
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-<style>
-    button{
-        color: rgb(27, 78, 27);
-        background-color:rgb(47, 210, 47);
-    }
-</style>
 <body>
-    <header><h1 >Evaluemos lo aprendido</h1></header>       
-    <nav >
+    <header>
+        <h1>Evaluación sobre los Reinos Animales</h1>
+    </header>
+    
+    <nav>
         <a href="inicio.html">Inicio</a>
         <a href="contenido.html">Contenido</a>
         <a href="actividades.html">Actividades</a>
         <a href="materialcomplementario.html">Material complementario</a>
         <a href="evaluacion.html">Evaluación</a>
         <a href="creditos.html">Créditos</a>
-        <img1 class="img" src="https://pngimg.com/uploads/github/github_PNG40.png">
     </nav>
+    
     <div class="row">
+        <h2>Por favor, responde las siguientes preguntas sobre los reinos animales.</h2>
+        <br>
+        <input type="text" id="name" placeholder="Escribe tu nombre y apellidos completos">
+        <br><br>
         
-        <main>
-            <article>
+        <form id="quiz-form">
+            <div class="question">
+                <h3>1. ¿Cuántos son los reinos de la naturaleza?</h3>
+                <input type="radio" id="a1" name="q1" value="a">
+                <label for="a1">a) 7</label><br>
+                <input type="radio" id="b1" name="q1" value="b">
+                <label for="b1">b) 6</label><br>
+                <input type="radio" id="c1" name="q1" value="c">
+                <label for="c1">c) 5</label><br>
+                <input type="radio" id="d1" name="q1" value="d">
+                <label for="d1">d) 15</label>
+            </div>
+            
+            <div class="question">
+                <h3>2. ¿Cuál de estos reinos se caracteriza por ser mamíferos?</h3>
+                <input type="radio" id="a2" name="q2" value="a">
+                <label for="a2">a) Protista</label><br>
+                <input type="radio" id="b2" name="q2" value="b">
+                <label for="b2">b) Planton</label><br>
+                <input type="radio" id="c2" name="q2" value="c">
+                <label for="c2">c) Animal</label><br>
+                <input type="radio" id="d2" name="q2" value="d">
+                <label for="d2">d) Ninguna de las anteriores</label>
+            </div>
+            
+            <div class="question">
+                <h3>3. ¿Qué organismo se considera parte del reino animal?</h3>
+                <input type="radio" id="a3" name="q3" value="a">
+                <label for="a3">a) Mariposa</label><br>
+                <input type="radio" id="b3" name="q3" value="b">
+                <label for="b3">b) Champiñón</label><br>
+                <input type="radio" id="c3" name="q3" value="c">
+                <label for="c3">c) Esponjas</label><br>
+                <input type="radio" id="d3" name="q3" value="d">
+                <label for="d3">d) Musgo</label>
+            </div>
+            
+            <div class="question">
+                <h3>4. ¿Cuál de estos seres vivos es un ejemplo del reino vegetal?</h3>
+                <input type="radio" id="a4" name="q4" value="a">
+                <label for="a4">a) Camello</label><br>
+                <input type="radio" id="b4" name="q4" value="b">
+                <label for="b4">b) Pingüino</label><br>
+                <input type="radio" id="c4" name="q4" value="c">
+                <label for="c4">c) Girasol</label><br>
+                <input type="radio" id="d4" name="q4" value="d">
+                <label for="d4">d) Leopardo</label>
+            </div>
 
-                <article> <b> Evaluación</b>
-                    <br>
-                    
-                    <body>
-                        <section class="section container">
-                            <h1 class="title">Ejemplo de Evaluación</h1>
-                            <p class="subtitle">
-                                Una <strong>evaluación sencilla</strong> usando JavaScript
-                            </p>
-                    
-                            <!-- Pregunta 1 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Cuantos son los reinos de la naturaleza?</p>
-                                <a class="panel-block" onclick="seleccionar(this, 1)">7</a>
-                                <a class="panel-block" onclick="seleccionar(this, 1)">6</a>
-                                <a id="correcta1" class="panel-block" onclick="seleccionar(this, 1)">5</a>
-                                <a class="panel-block" onclick="seleccionar(this, 1)">15</a>
-                                <p id="mensaje1" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 2 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Cual de estos reino e caracterizan por ser mamiferos?</p>
-                                <a class="panel-block" onclick="seleccionar(this, 2)">protista</a>
-                                <a class="panel-block" onclick="seleccionar(this, 2)">plantae</a>
-                                <a id="correcta2" class="panel-block" onclick="seleccionar(this, 2)">animal</a>
-                                <a class="panel-block" onclick="seleccionar(this, 2)">ninguna d la anteriores</a>
-                                <p id="mensaje2" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 3 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Qué organismo se considera parte del reino animal?</p>
-                                <a id="correcta3" class="panel-block" onclick="seleccionar(this, 3)">Mariposa</a>
-                                <a class="panel-block" onclick="seleccionar(this, 3)">Champiñón</a>
-                                <a class="panel-block" onclick="seleccionar(this, 3)">esponi/a>
-                                <a class="panel-block" onclick="seleccionar(this, 3)">Musgo</a>
-                                <p id="mensaje3" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 4 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Cuál de estos seres vivos es un ejemplo del reino vegetal?</p>
-                                <a class="panel-block" onclick="seleccionar(this, 4)">Camello</a>
-                                <a id="correcta4" class="panel-block" onclick="seleccionar(this, 4)">girasol</a>
-                                <a class="panel-block" onclick="seleccionar(this, 4)">pinguino</a>
-                                <a class="panel-block" onclick="seleccionar(this, 4)">Leopardo</a>
-                                <p id="mensaje4" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 5 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Cuál de las siguientes opciones describe mejor las características de las células del Reino Monera? </p>
-                                <a id="correcta5" class="panel-block" onclick="seleccionar(this, 5)">Unicelulares y sin núcleo definido</a>
-                                <a class="panel-block" onclick="seleccionar(this, 5)">Multiceluares y con nucleo definodo </a>
-                                <a class="panel-block" onclick="seleccionar(this, 5)">Unicelulares y con núcleo definido</a>
-                                <a class="panel-block" onclick="seleccionar(this, 5)">Multicelulares y sin núcleo definido</a>
-                                <p id="mensaje5" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 6 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Cómo se reproducen principalmente las bacterias del Reino Monera?</p>
-                                <a class="panel-block" onclick="seleccionar(this, 6)">esporas</a>
-                                <a class="panel-block" onclick="seleccionar(this, 6)">gweminacion</a>
-                                <a id="correcta6" class="panel-block" onclick="seleccionar(this, 6)">fisión binaria</a>
-                                <a class="panel-block" onclick="seleccionar(this, 6)">fermentacion</a>
-                                <p id="mensaje6" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 7 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Cuál de las siguientes opciones es un ejemplo de un protista unicelular?</p>
-                                <a class="panel-block" onclick="seleccionar(this, 7)">Algas rojas</a>
-                                <a class="panel-block" onclick="seleccionar(this, 7)">Algas pardas</a>
-                                <a class="panel-block" onclick="seleccionar(this, 7)">plas</a>
-                                <a id="correcta7" class="panel-block" onclick="seleccionar(this, 7)">amoebas</a>
-                                <p id="mensaje7" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 8 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Qué característica permite a las plantas producir su propio alimento?</p>
-                                <a id="correcta8" class="panel-block" onclick="seleccionar(this, 8)">Fotosíntesis</a>
-                                <a class="panel-block" onclick="seleccionar(this, 8)">Reproducción asexual</a>
-                                <a class="panel-block" onclick="seleccionar(this, 8)">Fotosíntesis</a>
-                                <a class="panel-block" onclick="seleccionar(this, 8)">Almacenamiento de energía en forma de almidón</a>
-                                <p id="mensaje8" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 9 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Cuál de las siguientes opciones describe cómo obtienen su alimento los hongos?</p>
-                                <a class="panel-block" onclick="seleccionar(this, 9)">Fotosíntesis</a>
-                                <a id="correcta9" class="panel-block" onclick="seleccionar(this, 9)">Absorbiendo nutrientes después de descomponer materia orgánica</a>
-                                <a class="panel-block" onclick="seleccionar(this, 9)">Capturando presas vivas</a>
-                                <a class="panel-block" onclick="seleccionar(this, 9)">Produciendo su propio alimento</a>
-                                <p id="mensaje9" class="panel-block"></p>
-                            </article>
-                    
-                            <!-- Pregunta 10 -->
-                            <article class="panel">
-                                <p class="panel-heading">¿Qué tipo de estructura producen los hongos para la reproducción y dispersión de esporas?</p>
-                                <a class="panel-block" onclick="seleccionar(this, 10)">tallos</a>
-                                <a id="correcta10" class="panel-block" onclick="seleccionar(this, 10)">Raíces</a>
-                                <a class="panel-block" onclick="seleccionar(this, 10)">Cuerpos fructíferos</a>
-                                <a class="panel-block" onclick="seleccionar(this, 10)">Hojas</a>
-                                <p id="mensaje10" class="panel-block"></p>
-                            </article>
-                        </section>
-                    
-                        <script>
-                            function seleccionar(evento, pregunta) {
-                                let mensaje = document.getElementById("mensaje" + pregunta);
-                                let correcta = "correcta" + pregunta;
-                                if (evento.id === correcta) {
-                                    mensaje.innerText = "Correcto!";
-                                    mensaje.classList.remove('has-text-danger');
-                                    mensaje.classList.add('has-text-primary');
-                                } else {
-                                    mensaje.innerText = "Error!! " + evento.innerText + " no es correcto.";
-                                    mensaje.classList.remove("has-text-primary");
-                                    mensaje.classList.add("has-text-danger");
-                                }
-                            }
-                        </script>
-                    </body>
+            <div class="question">
+                <h3>5. ¿Cómo se reproducen principalmente las bacterias del Reino Monera?</h3>
+                <input type="radio" id="a5" name="q5" value="a">
+                <label for="a5">a) Esporas</label><br>
+                <input type="radio" id="b5" name="q5" value="b">
+                <label for="b5">b) Gemación</label><br>
+                <input type="radio" id="c5" name="q5" value="c">
+                <label for="c5">c) Fisión binaria</label><br>
+                <input type="radio" id="d5" name="q5" value="d">
+                <label for="d5">d) Fermentación</label>
+            </div>
 
+            <div class="question">
+                <h3>6. ¿Cuál de las siguientes opciones describe mejor las características de las células del Reino Monera?</h3>
+                <input type="radio" id="a6" name="q6" value="a">
+                <label for="a6">a) Unicelulares y sin núcleo definido</label><br>
+                <input type="radio" id="b6" name="q6" value="b">
+                <label for="b6">b) Multicelulares y con núcleo definido</label><br>
+                <input type="radio" id="c6" name="q6" value="c">
+                <label for="c6">c) Unicelulares y con núcleo definido</label><br>
+                <input type="radio" id="d6" name="q6" value="d">
+                <label for="d6">d) Multicelulares y sin núcleo definido</label>
+            </div>
+            
+            <div class="question">
+                <h3>7. ¿Qué característica principal distingue a los organismos del Reino Fungi?</h3>
+                <input type="radio" id="a7" name="q7" value="a">
+                <label for="a7">a) Fotosíntesis</label><br>
+                <input type="radio" id="b7" name="q7" value="b">
+                <label for="b7">b) Heterotrofía</label><br>
+                <input type="radio" id="c7" name="q7" value="c">
+                <label for="c7">c) Movilidad</label><br>
+                <input type="radio" id="d7" name="q7" value="d">
+                <label for="d7">d) Multicelularidad</label>
+            </div>
+            
+            <div class="question">
+                <h3>8. ¿Qué tipo de estructura producen los hongos para la reproducción y dispersión de esporas?</h3>
+                <input type="radio" id="a8" name="q8" value="a">
+                <label for="a8">a) Tallos</label><br>
+                <input type="radio" id="b8" name="q8" value="b">
+                <label for="b8">b) Raíces</label><br>
+                <input type="radio" id="c8" name="q8" value="c">
+                <label for="c8">c) Hojas</label><br>
+                <input type="radio" id="d8" name="q8" value="d">
+                <label for="d8">d) Cuerpos fructíferos</label>
+            </div>
+            
+            <div class="question">
+                <h3>9. ¿Cuál de los siguientes no pertenece al Reino Plantae?</h3>
+                <input type="radio" id="a9" name="q9" value="a">
+                <label for="a9">a) Musgos</label><br>
+                <input type="radio" id="b9" name="q9" value="b">
+                <label for="b9">b) Helechos</label><br>
+                <input type="radio" id="c9" name="q9" value="c">
+                <label for="c9">c) Bacterias</label><br>
+                <input type="radio" id="d9" name="q9" value="d">
+                <label for="d9">d) Gimnospermas</label>
+            </div>
 
+            <div class="question">
+                <h3>10. ¿Qué característica permite a las plantas producir su propio alimento?</h3>
+                <input type="radio" id="a10" name="q10" value="a">
+                <label for="a10">a) Fotosíntesis</label><br>
+                <input type="radio" id="b10" name="q10" value="b">
+                <label for="b10">b) Almacenamiento de energía en forma de almidón</label><br>
+                <input type="radio" id="c10" name="q10" value="c">
+                <label for="c10">c) Reproducción asexual</label><br>
+                <input type="radio" id="d10" name="q10" value="d">
+                <label for="d10">d) Organismos autotróficos</label>
+            </div>
 
-            </article>
-        </main>
+            <button type="button" class="submit-btn" onclick="calcularResultados()">Enviar</button>
+        </form>
+        
+        <div id="resultados" class="resultados"></div>
         <aside></aside>
-
     </div>
-    <br>
-    <center><h2>Cuestionarios de evaluacion</h2>
-    <br>
-    <h3> Cuestionario #1 </h3>
-    <br>
-    <img src="Captura de pantalla 2024-06-27 093523.png" alt="" width="200px" height="70px">
-    <br>
-    <a href="evaluacion1.html"> <button>Pulse para ir</button></a>
-</center>
-<br>
 
-    
-    
+
     <footer class="footer">
-            <a href="https://www.unicordoba.edu.co/">Unicordoba</a>
-            <p<p>Licenciatura en informatica</p>
-            <p>3 semestre</p>
-            <p>2024</p>
+        <a href="https://www.unicordoba.edu.co/">Universidad de Córdoba</a><br>
+        <p>Licenciatura en Informática </p>
+        <p>3 Semestre</p>
+        <p>2024</p>
     </footer>
+
+    <script>
+        function calcularResultados() {
+            const respuestasCorrectas = ['c', 'c', 'a', 'c', 'c', 'a', 'b', 'd', 'c', 'a'];
+            const formulario = document.getElementById('quiz-form');
+            let puntaje = 0;
+
+            for (let i = 0; i < respuestasCorrectas.length; i++) {
+                const pregunta = formulario['q' + (i + 1)];
+                const respuestaSeleccionada = Array.from(pregunta).find(radio => radio.checked);
+                if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[i]) {
+                    puntaje++;
+                }
+            }
+
+            mostrarResultados(puntaje, respuestasCorrectas.length);
+        }
+
+        function mostrarResultados(puntaje, totalPreguntas) {
+            const nombre = document.getElementById("name").value;
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = `
+                <h2>Resultados</h2>
+                <p>${nombre}, obtuviste ${puntaje} de ${totalPreguntas} preguntas correctas.</p>
+            `;
+        }
+    </script>
 </body>
 </html>
